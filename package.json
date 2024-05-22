@@ -1,0 +1,25 @@
+{
+  "name": "next-react-native",
+  "version": "1.0.0",
+  "description": "monorepo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo run dev",
+    "web:dev": "turbo run dev --filter=web --filter=@repo/ui",
+    "mobile:dev": "turbo run dev --filter=mobile --filter=@repo/ui",
+    "build": "turbo run build",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "turbo": "latest"
+  },
+  "private": true
+}
